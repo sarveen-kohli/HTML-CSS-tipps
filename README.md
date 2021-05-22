@@ -16,7 +16,6 @@ Brief about how to CSS layout to display the content in a Index page:
  Sub Header(#sub_header) sticks to the top of the page 
  .footer is our footer and spans to 100% of space.
 
--
 To create responsive Web Design provide breakpoints to set viewport dimensions of the device that the application is being viewed using media query max-width.
 Various CSS3 Media Types-all,print,screen,speech
 
