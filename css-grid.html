@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>CSS Grid</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="utilities/fontawesome-free-5.5.0-web/css/all.css" rel="stylesheet"><!--hrefrel="stylesheet"-->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="css/sk-bootstrap.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="container-fluid head_color">
+		<div class="container">
+		  <header id="topheader" class="flex jc_spacebetween"><!---->
+			<nav id="menu">
+			    <a href="#">Logo</a>
+				<a href="index.html">Home</a>
+				<a href="#summary">About me</a>
+			</nav>	
+			<nav id="social-links" >
+				<i class="fa fa-linkedin fontawesome" aria-hidden="true"></i>
+				
+				<a href="#" id="insta"><i class="fa fa-instagram" aria-hidden="true"></i>
+</a>
+				<a href="https://github.com/sarveen-kohli?tab=repositories" id="git"><i class="fa fa-github" aria-hidden="true"></i>
+</a>
+				<a href="https://getbootstrap.com/docs/5.0/getting-started/introduction/" id="Bootstrap">Bootstrap</a>
+			</nav>
+		  </header>
+		</div>
+    </div>
+   <div class="container-fluid sub_head sticky1">
+      <header id="sub_header" class="container flex jc_right">
+       <!-- <div id="sub_text">Your are at: Home</div>-->
+		
+		 <form method="post" action="http://10.10.1.31/formview.php" class="flex jc_spacebetween">
+		 <input type="email" id="email" class="form-control" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required placeholder="Submit email to be in contact">
+		<input type="submit" value="Submit">
+		 </form> 
+	
+	</header></div>
+    <div id="content_container"  class="container flex">
+        <nav id="left_container"  class="sticky">
+        <div id="left_nav" class="flex flxdir_col overflow small">
+			<a href="index.html" class="top_link">Introduction<!--href="#intro_tabs"-->
+				
+			</a>
+		    <a href="css-flex.html">CSS Flexbox<!--href="#flex_tabs"-->
+					
+			</a>
+            <a href="css-grid.html">CSS Grid
+				
+			</a>
+			 <a href="flex-box-ocean.html">Flexbox Ocean
+				
+			</a>
+		</div>
+      </nav>
+		<main id="middle_container" class="flex">
+        <div id="main_content">
+          <div id="definition"> 
+			 <h1 id="gidbox">What is Grid</h1>
+			 <p class="bd-lead">A CSS layout that is best suited for multi-dimensional setup. 
+			 </p>
+          </div>
+          <div id="content">
+            	 <section id="why">
+			  <h2>Why Grid?</h2>
+			  <ul class="list_padding" style="list-style-type: disc">
+			  <li>Two-dimensional Grid System</li>
+			   <li>CSS Grid System replaces float layout</li>
+			   <li>Fast and clean code</li>
+			  <!-- <li>No need of CSS Framework</li>-->
+			  </ul>
+			 </section >
+			  
+			   <section id="gridmodel">
+			   <h2>CSS Grid Model</h2>
+			   
+			 	 <div class="items fish1"><img src="img/grid-container.PNG" width="400" alt="css-grid-model">
+				  </div>
+			 </section >
+			  
+			  <section id="gridproperties">
+				  <h2>Grid Properties</h2>
+				  <p>You can get an overview of the Grid properties in right navigation.Grid properties are non clickable right now. Detail examples will follow soon.In the meantime check <a href="about-me.html">About Me</a> page, which is created using CSS Grid layout.</p>
+			  </section >
+        
+			  
+        </div>
+        </div>
+        <aside id="right_container" class="sticky text_muted overflow pl_1"> 
+		  <strong class="h6 text_muted ">On this page</strong>
+          <nav id="right_navigation" class="flex flxdir_col small text_muted border_top">
+				 <!-- <a href="#workflow">Workflow</a>-->
+			  <a  href="#why">Why Grid</a>
+			  <a href="#gridmodel">CSS Grid Model</a>
+			  <a href="#gridproperties">Grid Properties</a>
+				 <ul id="grid_ul">
+					 <li>grid-template-columns </li>
+				   <li>grid-template-rows</li>
+				   
+				   <li>grid-template-areas</li>
+				 <li>grid-template</li>
+				   <li>grid-column-gap</li>
+				   <li>grid-row-gap</li>
+					 <li>grid-gap</li>
+					 <li>grid-auto-columns</li>
+				   <li>grid-auto-rows</li>
+				   
+				   <li>grid-auto-flow</li>
+				   
+				   <li>grid</li>
+				   <!--<li><a href="#">grid-template-columns </a></li>
+				   <li><a href="#">grid-template-rows</a></li>
+				   
+				   <li><a href="#">grid-template-areas</a></li>
+				 <li><a href="#">grid-template</a></li>
+				   <li><a href="#">grid-column-gap</a></li>
+				   <li><a href="#">grid-row-gap</a></li>
+					 <li><a href="#">grid-gap</a></li>
+					 <li><a href="#">grid-auto-columns</a></li>
+				   <li><a href="#">grid-auto-rows</a></li>
+				   
+				   <li><a href="#">grid-auto-flow</a></li>
+				   
+				   <li><a href="#">grid</a></li>-->
+				</ul>
+		 </nav>
+        </aside>
+      </main>
+    </div>
+<!--<div class="container-fluid footer_container">
+  <footer id="footer" class="container"> <div>#footer:Footer</div></footer>
+</div>-->
+	
+	 <div class="container-fluid footer_container">
+      <footer id="footer" class="container flex jc_spacebetween ">
+        <div><a href="about-me.html">About Me</a></div>
+		  <div><a href="css-flex.html">CSS Flexbox</a></div>
+		  <form method="post" action="http://10.10.1.31/formview.php" class="flex space jc_spacebetween">
+		 <input type="email" id="email1" class="form-control" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required placeholder="Submit email to be in contact">
+		<input type="submit" value="Submit">
+			 </form>
+		
+        
+       </footer>
+    </div>
+</body>
+</html>

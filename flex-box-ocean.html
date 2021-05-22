@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Flex Box Ocean</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="utilities/fontawesome-free-5.5.0-web/css/all.css" rel="stylesheet"><!--hrefrel="stylesheet"-->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="css/sk-bootstrap.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="container-fluid head_color">
+		<div class="container">
+		  <header id="topheader" class="flex jc_spacebetween"><!---->
+			<nav id="menu">
+			    <a href="#">Logo</a>
+				<a href="index.html">Home</a>
+				<a href="about-me.html">About me</a>
+			</nav>	
+			<nav id="social-links" >
+				<i class="fa fa-linkedin fontawesome" aria-hidden="true"></i>
+				
+				<a href="#" id="insta"><i class="fa fa-instagram" aria-hidden="true"></i>
+</a>
+				<a href="https://github.com/sarveen-kohli?tab=repositories" id="git"><i class="fa fa-github" aria-hidden="true"></i>
+</a>
+				<a href="https://getbootstrap.com/docs/5.0/getting-started/introduction/" id="Bootstrap">Bootstrap</a>
+			</nav>
+		  </header>
+		</div>
+    </div>
+    <div class="container-fluid sub_head sticky1">
+      <header id="sub_header" class="container flex jc_right">
+       <!-- <div id="sub_text">Your are at: Home</div>-->
+		
+		 <form method="post" action="http://10.10.1.31/formview.php" class="flex jc_spacebetween">
+		 <input type="email" id="email" class="form-control" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required placeholder="Submit email to be in contact">
+		<input type="submit" value="Submit">
+		 </form> 
+	
+	</header></div>
+    <div id="content_container"  class="container flex">
+    <nav id="left_container"  class="sticky">
+        <div id="left_nav" class="flex flxdir_col overflow small">
+			<a href="index.html" class="top_link">Introduction<!--href="#intro_tabs"-->
+				
+			</a>
+		    <a href="css-flex.html">CSS Flexbox<!--href="#flex_tabs"-->
+					
+			</a>
+            <a href="css-grid.html">CSS Grid
+				
+			</a>
+			 <a href="flex-box-ocean.html">Flexbox Ocean
+				
+			</a>
+		</div>
+      </nav>
+      <main id="middle_container" class="flex">
+        <div id="main_content">
+          <div id="definition"> 
+					<h1 id="workflow">Making Flex Items Sticky</h1>
+					<p class="bd-lead">Here you can experience an ocean of fish where fish floats as you scroll</p>
+            <!--<h1></h1>
+				<p></p>-->
+          </div>
+          <div id="content">
+	    <section id="summary">
+		<h2>Example Brief</h2>
+			  <p>In this section get to know an interesting example of flexbox with the help of position:sticky.Similar  examples are available at community tab of
+			  <a href="https://www.digitalocean.com/">digital ocean</a>
+			 CSS position property: sticky allows us to make elements stick when the scroll reaches a certain point. An element with position: sticky will behave like a relatively-positioned element until it reaches a specified point and then starts behaving like a statically-positioned element. In this post we’ll create a simple example to illustrate.
+			We’ll have a div container that will be a flex container and then 4 additional div elements that will be the flex items.
+			</p>
+		</section>
+			   <section id="ocean_html">
+				   <h2>HTML and CSS Code</h2>
+			    <div class="items"><img src="img/ocean-html.PNG" width="100%" alt="Fish-blue"></div>
+	    </section>
+			   <section id="ocean_container_css">
+			    <div class="items"><img src="img/ocean-container-css.PNG" width="100%" alt="Fish-blue"></div>
+	    </section>
+			  <section id="ocean">
+				
+			    <div class="ocean-container flex jc_spacearound">
+			 	 <div class="fish1"><img src="img/Fish1.png" width="100" alt="Fish-blue"></div>
+				 <div class="fish2"><img src="img/Fish2.png" width="100" alt="Fish-black"></div>
+				 <div class="fish3"><img src="img/Fish3.png" width="100" alt="Fish-brown"></div>
+				 <div class="fish4"><img src="img/Fish4.png" width="100" alt="Fish-green"></div>
+			  </div>
+	    </section>
+			  <section id="scroll down">
+				  <p>S</p>
+				  <p>C</p>
+				  <p>R</p>
+				  <p>O</p>
+				  <p>L</p>
+				  <p>L</p>
+				  <p>D</p>
+				  <p>O</p>
+				  <p>W</p>
+				  <p>N</p>
+				  <p>!</p>
+				  <p>S</p>
+				  <p>C</p>
+				  <p>R</p>
+				  <p>O</p>
+				  <p>L</p>
+				  <p>L</p>
+				  <p>D</p>
+				  <p>O</p>
+				  <p>W</p>
+				  <p>N</p>
+				  
+	    </section>
+			  
+			  
+			</div>
+        </div>
+        <aside id="right_container" class="sticky text_muted overflow pl_1"> 
+		  <strong class="h6 text_muted ">On this page</strong>
+          <nav id="right_navigation" class="flex flxdir_col small text_muted border_top">
+				 <!-- <a href="#workflow">Workflow</a>-->
+			 <a href="#workflow">Making Flex Items Sticky</a>
+                  
+				  <a href="#summary">Example Brief</a>
+                  
+		 </nav>
+        </aside>
+      </main>
+    </div>
+
+	<div class="container-fluid footer_container">
+      <footer id="footer" class="container flex jc_spacebetween ">
+        <div><a href="about-me.html">About Me</a></div>
+		  <div><a href="css-flex.html">CSS Flexbox</a></div>
+		  <form method="post" action="http://10.10.1.31/formview.php" class="flex space jc_spacebetween">
+		 <input type="email" id="email1" class="form-control" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required placeholder="Submit email to be in contact">
+		<input type="submit" value="Submit">
+			 </form>
+		
+        
+       </footer>
+    </div>
+</body>
+</html>

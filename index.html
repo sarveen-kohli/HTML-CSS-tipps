@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>CSS Tipps and Tricks</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!--hrefrel="stylesheet"-->
+<link href="css/sk-bootstrap.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="container-fluid head_color">
+		<div class="container"> <!--<label for="toggle" class="toggleme">&#9776;</label>-->
+		  <header id="topheader" class="flex jc_spacebetween"><!---->
+			<nav id="menu">
+			    <a href="#">Logo</a>
+				<a href="index.html">Home</a>
+				<a href="about-me.html">About me</a>
+			</nav>	
+			 
+			<nav id="social-links" >
+				<i class="fa fa-linkedin fontawesome" aria-hidden="true"></i>
+				
+				<a href="#" id="insta"><i class="fa fa-instagram" aria-hidden="true"></i>
+</a>
+				<a href="https://github.com/sarveen-kohli?tab=repositories" id="git"><i class="fa fa-github" aria-hidden="true"></i>
+</a>
+				<a href="https://getbootstrap.com/docs/5.0/getting-started/introduction/" id="Bootstrap">Bootstrap</a>
+			</nav>
+		  </header>
+		</div>
+    </div>
+    <div class="container-fluid sub_head sticky1">
+      <header id="sub_header" class="container flex jc_right">
+       <!-- <div id="sub_text">Your are at: Home</div>-->
+		
+		 <form method="post" action="http://10.10.1.31/formview.php" class="flex jc_spacebetween">
+		 <input type="email" id="email" class="form-control" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required placeholder="Submit email to contact">
+		<input type="submit" value="Submit">
+		 </form> 
+	
+	</header></div>
+	<!--<label for="toggle" class="toggleme">&#9776;</label>-->
+    <div id="content_container"  class="container flex">
+      <nav id="left_container"  class="sticky">
+        <div id="left_nav" class="flex flxdir_col overflow small">
+			<a href="index.html" class="top_link">Introduction<!--href="#intro_tabs"-->
+					<!--<ul id="intro_tabs">
+					   <li><a href="raw-layout.html">Raw Layout</a></li>
+					   <li><a href="initial-layout.html">Initial CSS Layout</a></li>
+					</ul>-->
+			</a>
+		    <a href="css-flex.html">CSS Flexbox<!--href="#flex_tabs"-->
+					<!--<ul id="flex_tabs">
+					   <li><a href="#">hi</a></li>
+					   <li><a href="#">byi</a></li>
+					</ul>-->
+			</a>
+            <a href="css-grid.html">CSS Grid
+					<!-- <ul id="grid_tabs">
+					   <li><a href="#">hi</a></li>
+					   <li><a href="#">byi</a></li>
+					 </ul>-->
+			</a>
+			 <a href="flex-box-ocean.html">Flexbox Ocean
+				
+			</a>
+		</div>
+      </nav>
+      <main id="middle_container" class="flex">
+        <div id="main_content">
+          <div id="definition"> 
+					<h1 id="workflow">Workflow</h1>
+					<p class="bd-lead">Get started to know,my journey to design the layout and develop this website</p>
+            <!--<h1></h1>
+				<p></p>-->
+          </div>
+          <div id="content">
+	    <section id="summary">
+		<h2>Quick Summary</h2>
+			  <p>As a part of Web Course Project at <a href="https://www.alfatraining.de/gefoerderte-weiterbildung/">alfatraining</a>,Deutschland, I designed and developed this website simply using HTML and CSS.Project timeline was 2 weeks. I took this as opportunity to implement my course learnings into a working model.Course instructor(Holger Steinbar)walked us through the Bootrsap framework during the course.I was fascinated by the extensive functionality of the Bootstrap and how it has made web developer's life easy. To learn the deep insights of Bootstrap,
+				I decided to develop a Website similar to Bootstrap rather than using Bootrap's templates and in build CSS. This way I could analyse the framework deeply, enhance my knowledge as well as develop my Project.
+			</p>
+		</section >
+        <section id="plan">
+          <h2>Plan the Project</h2>
+          <p>The first thing to achieve was the similar layout as Bootstrap 5 using minimal Javascript.
+            My goal was to create a website where I can present and demo my learnings and challenges I faced during my Project deveopment, that could in any way help other people in same boat as me. 
+            Thanks to the course instructor who guided the team to focus on the planning and documentation as this step helps to organize and give a structure to our thoughts. 
+          </p>
+          <section id="initial">
+            <h3>Initial Research </h3>
+            <p>To get the juice flowing, I did an initial research. I followed <a href="https://www.ionos.de/digitalguide/websites/web-entwicklung/software-reverse-engineering/">reverse engineering</a> approach. I started by understanding how Bootstrap Website is developed and read some articles on research engineering to
+              gather the required knowledge, how to analyse the website by looking at the source code of the website. I took some printouts,a pen and brainstormed my own ideas and thoughts.</p>
+          </section>
+          <section id="steps">
+            <h3>Steps to follow</h3>
+			  <ul class="list_padding" style="list-style-type: disc">
+				  
+			  <li>My goal was to design and develop the layout to structure the content in elements header,navigations,footer,sliders using HTML and provide styles as well as formatting using CSS.
+			  </li>
+			  <li>My biggest tool in this whole journey is dev toolbar and Dreamweaver. At every step I unit tested the template to find the bugs at initial stage of development</li>
+			  <li>Open the <a href="https://getbootstrap.com/docs/5.0/getting-started/introduction/">Bootstrap v5</a> website</li>
+			  <li>Open the Inspector tab in dev toolbar. This tab can be used to run and edit the CSS on the fly, making changes to the CSS snippets across the page.</li>
+			  <li>
+              I analyzed that container is the fundamental building block of the Bootsrap and the most juicy part. My own CSS contains 2 containers 
+              <ol type="a">
+			  <li>container, which sets a max-width at each responsive breakpoint</li>
+              <li>container-fluid, which is width: 100% at all breakpoints</li>
+		      </ol>
+                
+			  </li>
+			  <li>
+			  Main components of the Bootsrap5 website in body tag are,
+              <ol type="a">
+			  <li>header</li>
+              <li>subnavbar(subnavigation header)</li>
+              <li>Main Content container that consists Sidebar + main content</li>
+              <li>main class consists of introduction, definition,Table of contents</li>
+			  </ol>
+			  </li>
+				  
+				  <li>Bootstrap 5 is implemented using Flex box and Grid.</li>
+			  </ul>
+               
+          </section>
+         </section>
+        <section id="difference">
+          <h2>How my approach is different from Bootstrap5 Website</h2>
+          <ul style="list-style-type: disc">
+			<li>Bootstrap5 website is developed to be mobile-first and uses media queries to create breakpoints for layouts. Breakpoints are based on minimum viewport widths and allow to 
+            scale up the elements as needed. See <a href="https://getbootstrap.com/docs/5.0/layout/breakpoints/">breakpoints</a> to get deep insights. Although Mobile first is a modern approach but I followed Desktop first approach to have hands on. Mobile first approach, will implement in upcoming Projects.</li>
+            
+		  </ul>
+        </section>
+		<section id="challenges">
+		<h2>Challenges</h2>
+		<ul class="list_padding" style="list-style-type: disc">
+		 <li>Determine the layout : Bootstrap website layout is a mix of Flex and Grid approach. To set the elements under each other(1 dimensional) flex-box approach is used and to set the elements alternate to each other(2-dimensional) Grid approach is used.</li>
+		<li>If you scroll down,you will notice that 2 side Navigation bars left and right are sticky. Although to make an element sticky is not that difficult but to make flex elements sticky was quite tricky.
+			</li>
+			<li>Grid Layout is very extensive and need additional time to demonstrate the detailed examples. Unfortunaltely,could not implement this feature in 1st phase of the project.</li>
+			<li>Logo design is pending</li>
+		 </ul>
+		</section>
+        </div>
+        </div>
+        <aside id="right_container" class="sticky text_muted overflow pl_1"> 
+		  <strong class="h6 text_muted ">On this page</strong>
+          <nav id="right_navigation" class="flex flxdir_col small text_muted border_top">
+				 <!-- <a href="#workflow">Workflow</a>-->
+			 
+                  
+				  <a href="#summary">Quick Summary</a>
+                  <a href="#plan">Plan the Project</a>
+					  <ul>
+					  <li><a href="#initial">Initial Research</a></li>
+					  <li><a href="#steps">Steps to follow</a></li>  
+					  </ul>
+			  	 
+			      <a href="#difference">Bootstrap5 Difference</a>
+			  	  <a href="#challenges">Challenges</a>
+		 </nav>
+        </aside>
+      </main>
+    </div>
+<!--<div class="container-fluid footer_container">
+  <footer id="footer" class="container"> <div>#footer:Footer</div></footer>
+</div>-->
+	
+	 <div class="container-fluid footer_container">
+      <footer id="footer" class="container flex jc_spacebetween ">
+        <div><a href="about-me.html">About Me</a></div>
+		  <div><a href="css-flex.html">CSS Flexbox</a></div>
+		  <form method="post" action="http://10.10.1.31/formview.php" class="flex space jc_spacebetween">
+		 <input type="email" id="email1" class="form-control" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required placeholder="Submit email to be in contact">
+		<input type="submit" value="Submit">
+			 </form>
+		
+        
+       </footer>
+    </div>
+</body>
+</html>

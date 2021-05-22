@@ -1,0 +1,752 @@
+@charset "utf-8";
+/* CSS Document */
+/*---Global variable(begin with --) defined at the root level for colors. Global variables can be accessed through out the document.----*/
+
+
+*{
+	box-sizing:border-box;
+	
+}
+
+/*------------------------BODY----------------------------*/
+
+body{
+	margin:0;
+	font-family:sans-serif;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height:1.5;
+	color:#212529;
+	background-color: #fff;/**/
+}
+/*main,nav,aside,div{background-color: rgba(240,117,224,0.28);
+	margin: 1.5rem;
+	}*/
+	
+.sub_head{
+/*height: auto;*/
+z-index: 1020;
+background-color: rgba(255,255,255,0.95);
+box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.05),inset 0 -1px 0 rgba(0,0,0,0.15);
+}
+#content_container{
+margin-top: 1rem;}
+/*-------------------------COLORS----------------------------*/
+
+.head_color{
+	background-color: #7952b3;
+}
+/*------------------------HEADINGS----------------------------*/
+.h6{
+	font-size: 1rem;
+  }
+.h1,.h2,.h3,.h4,.h5,.h6{
+	font-weight: 500;
+	line-height: 1.2;/*Change font look from bold to normal*/
+}
+.text_muted
+{
+	color:#6c7574;
+}
+.text_muted1
+{
+	color:#6c7574;
+	font-size: 1.3rem;
+	/*border: 1px solid red;
+	padding: .5px;
+	margin:.5px;*/
+}
+.bd-lead{font-size:1.275rem;
+font-weight: 100;
+color:rgba(0,0,0.85)}
+
+
+/*------------------------GLOBAL CSS SELECTORS----------------------------*/
+#topheader a{
+	color:rgba(255,255,255,0.85)
+}
+#topheader{
+	padding:1rem 0;
+	height:3.7rem;
+}
+#sub_header{
+	padding:.8rem 0 0.5rem 0;;/**/
+	height:3.3rem;	
+}
+
+/*------------------------container classes----------------------------------*/
+
+.container{
+	max-width: 1140px;
+	/*border:1px solid blue;*/
+	/*background-color: rgba(240,117,224,0.28);*/
+	margin-left:auto;/*-----to move container in middle provide left and right margins as auto------*/
+	margin-right:auto;
+	padding-right: 0.75px;
+    
+	
+	/*padding-left:
+	padding-right:*/
+	}
+
+.container-fluid{
+	width: 100%;
+	
+	}
+
+
+#left_container{margin:0; width:20%;/*border:1px solid red;*/padding-left:1rem;padding-top: 0;}
+#middle_container{margin:0; width:80% ;/*border:2px solid green;*/}
+
+#main_content{margin:0; width:80% ;/*border:1px solid blue;*/}
+
+#right_container{margin:0; width:20%;/*border:1px solid blue;*/}
+
+#left_nav{margin:0;}
+#definition{margin:0;/*border:2px solid black;*/}
+#content{margin:0;/*border:2px solid black;*/}
+#right_navigation{margin:0; width:100% ;/*border:1px solid red;*/}
+
+h1/*,h2,h3,h4,h5,h6*/{margin-top:0; padding-top: 0;/*border:1px solid red;*/}
+
+/*-------------------------------------------------FLEX--------------------------------------------------------------*/
+/*-------------------------------------FLEX CLASS .flex------------------------------------*/
+/*-----Example: main class is set to flex so as to bring sidenavbar and inhalte in 1 row because default value of flex-direction is row------*/
+.flex{
+	display:flex;/*----default horizontal view---*/
+	
+}
+.flxdir_row{
+flex-direction: row;	
+}
+.flxdir_row_reverse{
+flex-direction: row-reverse;	
+}
+.flxdir_col{
+flex-direction: column;	
+}
+.flxdir_col_reverse{
+flex-direction: column-reverse;	
+}
+.al_it_stretch{
+	align-items: stretch;
+}
+.al_it_start{
+	align-items: flex-start;
+}
+.al_it_center{
+	align-items: center;
+}
+.al_it_end{
+	align-items: flex-end;
+}
+
+.jc_left{
+justify-content: flex-start;
+}
+.jc_right{
+justify-content: flex-end;
+}
+.jc_centre{
+justify-content: center;
+}
+
+.jc_spacebetween{
+justify-content: space-between;
+}
+.jc_spacearound{
+justify-content: space-around;
+}
+
+/*-------------------------------------------------OVERFLOW--------------------------------------------------------------*/
+.overflow{
+		overflow:auto;
+		}
+/*-------------------------------------------------GRID--------------------------------------------------------------*/
+/*-------------------------------------GRID CLASS .grid------------------------------------*/
+.grid{
+	display:grid;/*----default vertical view---*/
+	grid-template-columns: 1000px;
+}
+
+/*------------------------anchor tag a----------------------------------*/
+a{
+	text-decoration: none;
+	/*border:1px solid red;*/
+}
+
+/*--------------------header-#topheader--------------------------------*/
+#topheader
+{
+	
+	background-color: #7952b3;
+}/**/
+
+/*--------------------header-topheader 3 element id's #logo, #menu, #social-links--------------------------------*/
+
+
+#menu a{
+	padding-left:.5rem;
+	padding-right:.5rem;
+	/*border: 1px solid red;*/
+}
+#menu a:first-child{
+
+	padding-left:0;
+
+}
+
+#social-links a
+{
+	padding-left:.5rem;
+	padding-right:.5rem;
+	/*border: 1px solid red;*/
+}
+#social-links a:last-child{
+
+	border-radius: .25rem;
+	padding:.5rem .75rem;
+	font-weight: 600;
+	color:#ffe484;
+	border-color:#ffe484;
+	border-radius: .25rem;
+	line-height: 1.5;
+	text-align: center;
+	font-size:1rem;
+}
+.fontawesome{
+	color:rgba(255,255,255,0.85);
+}
+
+/*#menu{
+	margin: 0 auto;
+}*/
+
+/*------------------------ CONTENT container-->Left Navigation(.leftnavigation_container), Main(#middle_container)[Definition+Aside+content]---------------------*/
+
+/*------------------------------------------------------------LEFT NAVIGATION----------------------------------------------------*/
+/*------------------------------------Style left Navigation container,provide 20 vh to left navigation------------------------------------*/
+/*#leftnavigation_container{
+	flex:0 0 20%;---warum this???----
+	background-color: yellow;
+   
+}*/
+
+#left_container{
+    flex:0 0 20%;
+	/*background-color: cadetblue;*/
+
+}
+#left_container a{
+	text-decoration: none;
+	color:#212529/* rgba(0,0,0,0.85)*/;
+    font-weight:600;
+
+	/*border:1px solid red;*/
+}
+/*#left_container a:focus{
+	box-shadow: 0 0 0 rgba(121,82,179,0.1);
+}*/
+/*-------content lists-------*/
+
+.list_left_padding{
+	
+	padding-left: 1rem;
+}
+
+/*left style lists*/
+ div ul  {
+	list-style: none;
+
+}
+ strong, #left_nav ul li a{
+	color:#6c7574;
+	 font-weight: 400;
+
+}
+#left_nav ul {
+	/*border:1px solid hotpink;*/
+	margin-top:0;
+	
+
+}
+#left_nav ul  {
+	/*border:1px solid hotpink;*/
+	padding-left:0;
+
+}
+#left_nav a{
+	margin-bottom: 0.25rem;
+}
+
+#left_nav a:hover{
+	
+	color:rgba(0,0,0,0.85);
+	/*border:1px solid red;*/
+}
+.small{
+	font-size:0.875rem;
+
+}
+/*right style lists*/
+#right_navigation a,#right_navigation ul li a
+{
+	color:#6c7574;
+}
+#right_navigation ul  {
+	padding-left: 1rem;
+	margin-top: 0;
+	/*border:1px solid green;*/
+}
+#right_navigation a{
+	margin-bottom: 0.25rem;
+}
+.border_bottom{
+	/*border-bottom: 1px solid #dee2e6;*/
+	margin-top:0.5rem;
+	
+}
+.border_top{
+	/*border-bottom: 1px solid #dee2e6;*/
+	border-top:1px solid #dee2e6;;
+	
+}
+.mg{padding-bottom: .5rem;}
+
+/*----navigation-mousover effect-----*/
+#menu a:hover{color:#fff;}
+#social-links a:hover{color:#fff;}
+/*-----------------------------------------style left Navigation container anchors, make anchor elements collapsable----------------------------------------*/
+
+.left {
+	
+	/*border:2px solid red;*/
+}
+.sticky{
+	position:sticky;
+	top:4.5rem;
+	
+	align-self: flex-start;
+	height:calc(100vh - 12.5rem);/**/
+
+}
+.sticky1{
+	position:sticky;
+	top:0px;
+	
+
+}
+[id]{scroll-margin-top:4rem;}
+.fixed{
+	position:fixed;
+	top:0px;
+	
+
+}
+
+/*--------------------------------------Left Navigation container: Thema INTRODUCTION ANCHORS----------------------------------*/
+#intro_tabs{
+	/*color: red;*/
+	display:none;
+	
+	
+	}
+#intro_tabs:target{display:block;}
+
+/*--------------------------------------Left Navigation container: Thema FLEX ANCHORS----------------------------------*/
+#flex_tabs{
+	/*color: red;*/
+	display:none;
+	
+	
+	}
+#flex_tabs:target{display:block;}
+
+
+/*--------------------------------------Left Navigation container: Thema GRID ANCHORS----------------------------------*/
+#grid_tabs{
+	/*color: red;*/
+	display:none;
+	}
+#grid_tabs:target{display:block;}
+
+/*-----------------------------------------Main(#middle_container)[Definition+Aside+content]---------------------------------------------*/
+/*#startcontent{
+	
+	position: sticky;
+	top:0;
+	left:0;
+}
+#workflow{
+	font-size: 3rem;
+}*/
+#middle_container{
+	flex:0 0 80%;/*	---warum this???----*/
+	/*---rem or vw does not work,they move out of the container Holger?---*/
+	/*background-color: aqua;*/
+	height:auto;
+	
+	
+}
+
+#main_content{
+	flex:0 0 80%;
+	/*background-color: lightcoral;*/
+}
+#right_container
+{
+	flex:0 0 20%;
+	/*background-color: orange;*/
+}
+#definition{
+	/*flex:0 0 20%;
+	background-color: hotpink;*/
+}
+#content{
+	/*flex:0 0 80%;
+	background-color: blueviolet;*/
+}
+
+/*---------------------------------------------------------------TABLE-------------------------------------------------------------------------*/
+
+/*---------------------------------------------Local variables defined for the color at the element level---------------------------------------*/
+
+.table {
+  --bs-table-bg: transparent;
+  --bs-table-striped-color: #212529;
+  --bs-table-striped-bg: rgba(0, 0, 0, 0.05);
+  --bs-table-active-color: #212529;
+  --bs-table-active-bg: rgba(0, 0, 0, 0.1);
+  --bs-table-hover-color: #212529;
+  --bs-table-hover-bg: rgba(0, 0, 0, 0.075);
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #212529;
+  vertical-align: top;
+  border-color: #dee2e6;
+	
+}
+
+.table{border-bottom-width: 1px;
+ border-bottom-color: currentColor;}
+.table > :not(caption) > * > * {
+  padding: 0.5rem 0.5rem;
+  background-color: var(--bs-table-bg);
+ /* background-image: linear-gradient(var(--bs-table-accent-bg), var(--bs-table-accent-bg));*/
+  border-bottom-width: 1px;
+}
+/*------------------------color of heading bottom-------------------------------*/
+.table > :not(:last-child) > :last-child > * {
+	
+  border-bottom-color: currentColor;
+}
+
+
+/*
+*****************************/
+thead,
+tbody,
+tfoot,
+tr,
+td,
+th {
+  border-color: inherit;
+  border-style: solid;
+  border-width: 0;
+}
+.table-primary {
+  --bs-table-bg: #cfe2ff;
+  --bs-table-striped-bg: #c5d7f2;
+  --bs-table-striped-color: #000;
+  --bs-table-active-bg: #bacbe6;
+  --bs-table-active-color: #000;
+  --bs-table-hover-bg: #bfd1ec;
+  --bs-table-hover-color: #000;
+  color: #000;
+  border-color: #bacbe6;
+}
+
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/*MARGINS*/
+
+.mg-top{
+margin-top:1.5rem;;
+}
+.mg-right{
+	margin-right: 1.5rem;/* not working*/
+}
+.p_header{
+	padding: 0.75rem 0;
+}
+.pl_1{padding-left: 1rem;}
+
+/*
+--------------------------------FLEXBOX PAGE--------------------------------*/
+.flex-container
+{
+	background-color: rgba(86,61,124,0.15);
+	border: rgba(86,61,124,0.15);
+	width:37.5rem;
+	padding:0.625rem;
+	/*margin:auto;*/
+	
+}
+.flx-prop-container
+{
+	border: 3px solid #dee2e6;
+	width:37.5rem;
+	padding:0.625rem;
+	
+}
+.flex-container_height
+{
+	height:25rem;
+	
+}
+.item_height
+{
+	height:6.25rem;
+	
+}
+.items
+	{
+	color:#7952b3; border:1px solid #7952b3;
+	font-weight: bold; 
+	margin:5px;
+	font-size:1.25rem;text-align:center;padding:0.625rem;
+	}
+
+
+.item1{background-color:#E8B500;}
+
+.item2{background-color:#FFCA0E;}
+
+.item3{background-color:#FFD84D;}
+
+.item4{background-color:#FFE692;}
+
+.order{order:0;}
+.order1{order:1;}
+.orderminus1{order:-1;}
+.orderminus2{order:-2;}
+
+.flx_grow1{flex-grow: 1;}
+
+.flx_grow2{flex-grow: 2;}
+
+.flx_grow3{flex-grow: 3;}
+.flx_basis200{flex-basis: 12.5rem;}
+/*
+--------------------------------FLEX Properties--------------------------------*/
+.flx_wrap{
+	flex-wrap: wrap;
+}
+.flx_nowrap{
+	flex-wrap: nowrap;}
+.flx_wraprev{
+	flex-wrap: wrap-reverse;
+}
+/*
+--------------------------------FLEXBOX Ocean--------------------------------*/
+.ocean-container
+{
+	/*background-color: rgba(86,61,124,0.15);
+	border: 1px dashed blue;*/
+	
+	height:37.5rem;
+	padding:0.625rem;
+	align-items: flex-start;
+	/*margin:auto;*/
+}
+.fish1{
+	position:sticky;
+	top:4rem;
+}
+.fish2{
+	position:sticky;
+	top:0;
+}
+.fish3{
+	position:sticky;
+	bottom:1rem;
+	align-self: flex-end;
+}
+
+#ocean{
+	
+	position:relative;
+	background-color: skyblue;
+	border: 1px dashed blue;
+	
+	height:37.5rem;
+	padding:0.625rem;
+	align-items: flex-start;
+}
+.wave{
+	position:absolute;
+	bottom:0;
+	left:0;
+	width: 100%;
+	height:100%;
+	background-image: url("/img/wave.png");
+}
+/*
+---------FOOTER----------------*/
+.footer_container{
+	/*border: 1px solid red;*/
+	padding:1rem 0;
+	height:5rem;
+	color:rgba(255,255,255,0.85)
+}
+#footer a{
+	font-size:.875rem;
+	color:#63707c;
+}
+/*.form-control{
+	
+	padding:.375rem .75rem;
+	
+	font-size:1rem;
+	font-weight:400;
+	line-height: 1.5;
+	color:#212529;
+	border-radius:.5px;
+	
+}*//*
+.act{border-color: 1px solid red;}*/
+input[type=submit]{
+	color:#6c757d;text-align: center;
+	border-color: #dee2e6;
+	border-radius:.5px;
+	padding-top:1px;
+	font-size:1rem;
+	font-weight:400;
+	line-height: 1.5;/**/
+	background-color: rgba(255,255,255,0.95);
+	width:7rem;
+	cursor: pointer;
+	
+}
+input[type=email]{
+	color:#6c757d;text-align: center;
+	border-color: #dee2e6;
+	border-radius:.5px;
+	padding:1px;
+	font-size:1rem;
+	font-weight:400;
+	line-height: 1.5;/**/
+	background-color: rgba(255,255,255,0.95);
+	width:15rem
+	
+}/*
+
+------------Media queries-----------*/
+
+	/*
+
+---------Hoverable Menu-------------
+
+.dropbtn {
+  background-color: #ffe484;
+	width:7rem;
+	height:2rem;
+  color: darkviolet;
+  padding: .6rem;
+  font-size: 1rem;
+  border: 1px solid brown;
+ 
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+	margin-top:0px;
+	 border: 1px solid brown;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #F1EBD5;
+  min-width: 8.75rem;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: darkviolet;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #D0AB27;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #ffe484;}
+*/
+
+
+@media (max-width: 768px) {/* screen size<=768px */
+	#topheader{
+		justify-content: space-around;
+		background-color:lightpink;
+			  }
+	#content_container{
+		flex-direction: column;
+		margin-top: 1rem;
+				}
+	
+	#left_nav{
+		
+		flex-direction: row;
+		
+	}
+	#left_container{
+		/*height: auto;*/
+		width: 100%;
+		
+		position:sticky;
+		top:3.8rem;
+
+		z-index: 10020;
+		background-color: rgba(255,255,255,0.95);
+		box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.05),inset 0 -1px 0 rgba(0,0,0,0.15);
+		}
+	
+#left_nav ul  {
+	padding:1px;
+			}
+#left_nav a{
+	margin: 0.25rem;
+	padding:3px;
+}
+#middle_container{margin:0.25rem; width:100% ;/*border:2px solid green;*/}
+
+#main_content{margin:0.25rem; width:50% ;/*border:1px solid blue;*/}
+
+#right_container{margin:0.25rem; width:50%;/*border:1px solid blue;*/}
+}
+
+
+@media (max-width: 576px) {
+	#topheader{
+		
+		justify-content: space-around;
+		background-color:lightskyblue;
+		
+	}
+}
+/* @media (max-width: 400px) {
+	#topheader{
+		display: flex;
+		flex-direction: column;
+		color: red;	
+	}	
+	
+} */

@@ -1,0 +1,525 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>CSS Flex</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="utilities/fontawesome-free-5.5.0-web/css/all.css" rel="stylesheet"><!--hrefrel="stylesheet"-->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="css/sk-bootstrap.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<div class="container-fluid head_color">
+		<div class="container">
+		  <header id="topheader" class="flex jc_spacebetween"><!---->
+			<nav id="menu">
+			    <a href="#">Logo</a>
+				<a href="index.html">Home</a>
+				<a href="about-me.html">About me</a>
+			</nav>	
+			<nav id="social-links" >
+				<i class="fa fa-linkedin fontawesome" aria-hidden="true"></i>
+				
+				<a href="#" id="insta"><i class="fa fa-instagram" aria-hidden="true"></i>
+</a>
+				<a href="https://github.com/sarveen-kohli?tab=repositories" id="git"><i class="fa fa-github" aria-hidden="true"></i>
+</a>
+				<a href="https://getbootstrap.com/docs/5.0/getting-started/introduction/" id="Bootstrap">Bootstrap</a>
+			</nav>
+		  </header>
+		</div>
+    </div>
+    <div class="container-fluid sub_head sticky1">
+      <header id="sub_header" class="container flex jc_right">
+       <!-- <div id="sub_text">Your are at: Home</div>-->
+		
+		 <form method="post" action="http://10.10.1.31/formview.php" class="flex jc_spacebetween">
+		 <input type="email" id="email" class="form-control" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required placeholder="Submit email to be in contact">
+		<input type="submit" value="Submit">
+		 </form> 
+	
+	</header>
+</div>
+    <div id="content_container"  class="container flex">
+      <nav id="left_container"  class="sticky">
+        <div id="left_nav" class="flex flxdir_col overflow small">
+			<a href="index.html" class="top_link">Introduction<!--href="#intro_tabs"-->
+				
+			</a>
+		    <a href="css-flex.html">CSS Flexbox<!--href="#flex_tabs"-->
+					
+			</a>
+            <a href="css-grid.html">CSS Grid
+				
+			</a>
+			 <a href="flex-box-ocean.html">Flexbox Ocean
+				
+			</a>
+		</div>
+      </nav>
+    
+      <main id="middle_container" class="flex">
+        <div id="main_content">
+          <div id="definition"> 
+			 <h1 id="flexbox">What is Flex</h1>
+			 <p class="bd-lead">A CSS layout that is best suited for one dimensional layout.
+			 </p>
+          </div>
+         <div id="content">
+			 <section id="why">
+			  <h2>Why Flex Box?</h2>
+			  <ul class="list_padding" style="list-style-type: disc">
+			  <li>No FLOATS!</li>
+			   <li>Responsive and mobile-friendly</li>
+			   <li>Positioning child elements is much easier</li>
+			   <li>Order of elements can be changed without editing the HTML source code</li>
+			   <li>Better way to build one-dimensional layouts</li>
+			  </ul>
+			 </section >
+			  
+			   <section id="flexmodel">
+			   <h2>Flex Box Model</h2>
+			   
+			 	 <div class="items fish1"><img src="img/flx-box-model.PNG" width="400" alt="flex-box-model">
+				   </div>
+			 </section >
+			  
+			  <section id="flexproperties">
+				  <h2>Flex Box Properties</h2>
+			  </section >
+			  
+			  <section id="flx_dir">
+			  <h3>flex-direction</h3>
+			  <p>This property specifies the direction of the items</p>
+			  <div class="flx-prop-container">VALUES: row|row-reverse|column|column-reverse</div><br>
+			  <div class="flx-prop-container">SYNTAX:<b></b> 
+			  .flx-prop-container
+				  {
+				  flex-direction: row
+				  }
+			 </div>
+			 
+			  <h4>DEMO</h4>
+			  <p><b>flex-direction: row</b>. Default value is row. Items are displayed in a row.</p>
+			  <div class="flex-container flex">
+			 	 <div class="items item1">One</div>
+				 <div class="items item2">Two</div>
+				 <div class="items item3">Three</div>
+				 <div class="items item4">Four</div>
+			  </div>
+			 	
+			  <p><b>flex-direction: row-reverse</b>. Items are displayed in reverse order in a row.</p>
+			  <div class="flex-container flex flxdir_row_reverse">
+			 	 <div class="items item1">One</div>
+				 <div class="items item2">Two</div>
+				 <div class="items item3">Three</div>
+				 <div class="items item4">Four</div>
+			  </div>
+			  
+				  
+			   
+			  <p><b>flex-direction: column</b>. Items are displayed in a column.</p>
+			  <div class="flex-container flex flxdir_col">
+			 	 <div class="items item1">One</div>
+				 <div class="items item2">Two</div>
+				 <div class="items item3">Three</div>
+				 <div class="items item4">Four</div>
+			  </div>
+			    
+			  
+			  <p><b>flex-direction: column-reverse</b>. Items are displayed in reverse order in a column.</p>
+			  <div class="flex-container flex flxdir_col_reverse">
+			 	 <div class="items item1">One</div>
+				 <div class="items item2">Two</div>
+				 <div class="items item3">Three</div>
+				 <div class="items item4">Four</div>
+			  </div> 
+			  </section>
+			  
+		   <section id="flxwrap">
+                <h3>flex-wrap</h3>
+			   <p>This property specifies if items should wrap or not.</p>
+				  <div class="flx-prop-container">Values: wrap|no-wrap|wrap-reverse</div><br>
+				  <div class="flx-prop-container">SYNTAX:<b></b> 
+				  .flx-prop-container
+					  {
+					  flex-wrap: no-wrap
+					  }
+			 	  </div>
+			 
+			  <h4>DEMO</h4>
+			   <p><b>flex-wrap: no-wrap</b>.</p>
+			   <p>With no-wrap,boxes are flowing out</p>
+                <div class="flex-container flex flx_nowrap">
+                  <div class="items item1">One</div>
+                  <div class="items item2">Two</div>
+                  <div class="items item3">Three</div>
+                  <div class="items item4">Four</div>
+                  <div class="items item1">Five</div>
+                  <div class="items item2">Six</div>
+                  <div class="items item3">Seven</div>
+                  <div class="items item4">Eight</div>
+                  <div class="items item1">Nine</div>
+                  
+                  </div>
+                <p><b>flex-wrap: wrap</b></p>
+                <div class="flex-container flex flx_wrap">
+                  <div class="items item1">One</div>
+                  <div class="items item2">Two</div>
+                  <div class="items item3">Three</div>
+                  <div class="items item4">Four</div>
+                  <div class="items item1">Five</div>
+                  <div class="items item2">Six</div>
+                  <div class="items item3">Seven</div>
+                  <div class="items item4">Eight</div>
+                  <div class="items item1">Nine</div>
+                  <div class="items item2">Ten</div>
+                  </div>
+                
+                <p><b>flex-wrap: wrap-reverse</b></p>
+                <div class="flex-container flex flx_wraprev">
+                  <div class="items item1">One</div>
+                  <div class="items item2">Two</div>
+                  <div class="items item3">Three</div>
+                  <div class="items item4">Four</div>
+                  <div class="items item1">Five</div>
+                  <div class="items item2">Six</div>
+                  <div class="items item3">Seven</div>
+                  <div class="items item4">Eight</div>
+                  <div class="items item1">Nine</div>
+                  <div class="items item2">Ten</div>
+                  </div>
+                
+              </section>
+           <section id="flx_justifyc">
+			   <h3>justify-content</h3>
+			   <p>This property is used for Horizontal alignment.</p>
+				  <div class="flx-prop-container">Values: flex-start|flex-end|center|space-around|space-between|space-evenly</div><br>
+				  <div class="flx-prop-container">SYNTAX:<b></b> 
+				  .flx-prop-container
+					  {
+					  justify-content: flex-start
+					  }
+			 	  </div>
+			 
+			  <h4>DEMO</h4>
+			   <p><b>justify-content: flex-start</b></p>
+               <div class="flex-container flex jc_left">
+                 <div class="items item1">One</div>
+                 <div class="items item2">Two</div>
+                 <div class="items item3">Three</div>
+                 <div class="items item4">Four</div>
+                </div>
+               <p><b>justify-content: flex-end</b></p>
+               <div class="flex-container flex jc_right">
+                 <div class="items item1">One</div>
+                 <div class="items item2">Two</div>
+                 <div class="items item3">Three</div>
+                 <div class="items item4">Four</div>
+                </div>
+               <p><b>justify-content: center</b></p>
+               <div class="flex-container flex jc_centre">
+                 <div class="items item1">One</div>
+                 <div class="items item2">Two</div>
+                 <div class="items item3">Three</div>
+                 <div class="items item4">Four</div>
+                </div>
+               <p><b>justify-content: space-around</b></p>
+               <div class="flex-container flex jc_spacearound">
+                 <div class="items item1">One</div>
+                 <div class="items item2">Two</div>
+                 <div class="items item3">Three</div>
+                 <div class="items item4">Four</div>
+                </div>
+               <p><b>justify-content: space-between</b></p>
+               <div class="flex-container flex jc_spacebetween">
+                 <div class="items item1">One</div>
+                 <div class="items item2">Two</div>
+                 <div class="items item3">Three</div>
+                 <div class="items item4">Four</div>
+                </div>
+           </section>
+			 
+           <section id="flx_align_items">
+			 <h3>align-items</h3>
+			   <p>This property is used for Vertical alignment.</p>
+				  <div class="flx-prop-container">Values: flex-start|flex-end|center|stretch|baseline</div><br>
+				  <div class="flx-prop-container">SYNTAX:<b></b> 
+				  .flx-prop-container
+					  {
+					  align-items: flex-start
+					  }
+			 	  </div>
+			 <h4>DEMO</h4>
+             <p>align-items: stretch(default)</p>
+             <div class="flex-container flex-container_height flex al_it_stretch">
+               <div class="items item1">One</div>
+               <div class="items item2">Two</div>
+               <div class="items item3">Three</div>
+               <div class="items item4">Four</div>
+               </div>
+             <p>align-items: flex-start</p>
+             <div class="flex-container flex-container_height flex al_it_start">
+               <div class="items item1">One</div>
+               <div class="items item2">Two</div>
+               <div class="items item3">Three</div>
+               <div class="items item4">Four</div>
+               </div>
+             <p>align-items: flex-end</p>
+             <div class="flex-container flex-container_height flex al_it_end">
+               <div class="items item1">One</div>
+               <div class="items item2">Two</div>
+               <div class="items item3">Three</div>
+               <div class="items item4">Four</div>
+               </div>
+             <p>align-items: center(Example1)</p>
+             <div class="flex-container flex-container_height flex al_it_center">
+               <div class="items item1">One</div>
+               <div class="items item2">Two</div>
+               <div class="items item3">Three</div>
+               <div class="items item4">Four</div>
+             </div>
+             <p>align-items: center(Example2).Set height of item 2 as 100px</p>
+             <div class="flex-container flex-container_height flex al_it_center">
+               <div class="items item1">One</div>
+               <div class="items item2 item_height">Two</div>
+               <div class="items item3">Three</div>
+               <div class="items item4">Four</div>
+             </div>
+           </section>
+           
+           
+           <section id="flx_align_self">
+            <h3>align-self</h3>
+              <p>This property is similar to align-items with a differnece that it is used for Vertical alignment for one of the items inside a flexible element</p>
+               <div class="flx-prop-container">Values: auto|flex-start|flex-end|center|stretch|baseline</div><br>
+               
+                </section>
+		      <section id="flx_align_content">
+			    
+			   <h3>align-content</h3>
+			   <p>This property is used for Vertical alignment.</p>
+				  <div class="flx-prop-container">Values: flex-start|flex-end|center|stretch|space-around|space-between|space-evenly</div><br>
+				  <div class="flx-prop-container">SYNTAX:<b></b> 
+				  .flx-prop-container
+					  {
+					  align-content: flex-start
+					  }
+			 	  </div>
+			 
+			  <h4>DEMO</h4>
+             <p>align-content: stretch(default)</p>
+             <div class="flex-container flex-container_height flex al_it_stretch">
+               <div class="items item1">One</div>
+               <div class="items item2">Two</div>
+               <div class="items item3">Three</div>
+               <div class="items item4">Four</div>
+               </div>
+             <p>align-content: flex-start</p>
+             <div class="flex-container flex-container_height flex al_it_start">
+               <div class="items item1">One</div>
+               <div class="items item2">Two</div>
+               <div class="items item3">Three</div>
+               <div class="items item4">Four</div>
+               </div>
+             <p>align-content: flex-end</p>
+             <div class="flex-container flex-container_height flex al_it_end">
+               <div class="items item1">One</div>
+               <div class="items item2">Two</div>
+               <div class="items item3">Three</div>
+               <div class="items item4">Four</div>
+               </div>
+             <p>align-content: center(Example1)</p>
+             <div class="flex-container flex-container_height flex al_it_center">
+               <div class="items item1">One</div>
+               <div class="items item2">Two</div>
+               <div class="items item3">Three</div>
+               <div class="items item4">Four</div>
+             </div>
+             <p>align-items: center(Example2).Set height of item 2 as 100px</p>
+             <div class="flex-container flex-container_height flex al_it_center">
+               <div class="items item1">One</div>
+               <div class="items item2 item_height">Two</div>
+               <div class="items item3">Three</div>
+               <div class="items item4">Four</div>
+             </div>
+			  <p>align-content: space-around</p>
+             <div class="flex-container flex-container_height flex al_it_end">
+               <div class="items item1">One</div>
+               <div class="items item2">Two</div>
+               <div class="items item3">Three</div>
+               <div class="items item4">Four</div>
+               </div>
+			  <p>align-content: flex-between</p>
+             <div class="flex-container flex-container_height flex al_it_end">
+               <div class="items item1">One</div>
+               <div class="items item2">Two</div>
+               <div class="items item3">Three</div>
+               <div class="items item4">Four</div>
+               </div>
+			<p>align-content: flex-between</p>
+             <div class="flex-container flex-container_height flex al_it_end">
+               <div class="items item1">One</div>
+               <div class="items item2">Two</div>
+               <div class="items item3">Three</div>
+               <div class="items item4">Four</div>
+               </div>
+           </section> 
+			 
+			 
+			   <section id="flx_grow">
+			   <h3>flex-grow </h3>
+			   <p>This property works on the width of the flex item and applies on indicidual items. It specifies width to the item to grow it relative to other items.</p>
+				  <div class="flx-prop-container">Value: number(0, 1...) </div><br>
+				  <div class="flx-prop-container">SYNTAX:<b></b> 
+				  .flx-prop-container
+					  {
+					  flex-grow: 1;
+					  }
+			 	  </div>
+			 
+			 <h4>DEMO</h4>
+             <p>Provide flex-grow: 2 to flex item Two to double(grow) its width</p>
+             <div class="flex-container flex">
+               <div class="items item1 flx_grow1">One</div>
+               <div class="items item2 flx_grow2">Two</div>
+               <div class="items item3">Three</div>
+               <div class="items item4">Four</div>
+               </div>
+             <p>Provide flex-grow: 3 to flex item Two to triple(grow) its width</p>
+             <div class="flex-container flex">
+               <div class="items item1">One</div>
+               <div class="items item2 flx_grow3">Two</div>
+               <div class="items item3">Three</div>
+               <div class="items item4">Four</div>
+               </div>
+             <p>Provide flex-grow: 2 to flex item Two to double(grow) its width and flex-grow: 3 to flex item Two to triple(grow) its width</p>
+             <div class="flex-container flex">
+               <div class="items item1">One</div>
+               <div class="items item2 flx_grow2">Two</div>
+               <div class="items item3 flx_grow3">Three</div>
+               <div class="items item4">Four</div>
+               </div>
+           </section>
+		   
+			  
+			   <section id="flx_basis">
+			   <h3>flex-basis </h3>
+			   <p>This property works on the width of the flex item and applies on indicidual items. It specifies width to the item to grow it relative to other items.</p>
+				  <div class="flx-prop-container">#px </div><br>
+				  <div class="flx-prop-container">SYNTAX:<b></b> 
+				  .flx-prop-container
+					  {
+					  flex-basis: 200px;
+					  }
+			 	  </div>
+			 
+			 <h4>DEMO</h4>
+             <p>Provide flex-basis: 200px to flex item Two</p>
+             <div class="flex-container flex">
+               <div class="items item1 ">One</div>
+               <div class="items item2 flx_basis200">Two</div>
+               <div class="items item3">Three</div>
+               <div class="items item4">Four</div>
+               </div>
+             
+           </section>
+			 
+			   <section id="flx_order">
+			   <h3>order</h3>
+			   <p>This property specifies the order of the item relative to other items in a flex container. Default Order value of all the flex items is 0</p>
+				  <div class="flx-prop-container">Value: number(...-1,0, 1...) </div><br>
+				  <div class="flx-prop-container">SYNTAX:<b></b> 
+				  .flx-prop-container
+					  {
+					  order: 1;
+					  }
+			 	  </div>
+			 
+			 <h4>DEMO</h4>
+             <p>Provide order: 0(by default) to flex item Two</p>
+             <div class="flex-container flex">
+               <div class="items item1">One</div>
+               <div class="items item2 order0">Two</div>
+               <div class="items item3">Three</div>
+               <div class="items item4">Four</div>
+               </div>
+             <p>Provide order: 1 to flex item Two</p>
+             <div class="flex-container flex">
+               <div class="items item1">One</div>
+               <div class="items item2 order1">Two</div>
+               <div class="items item3">Three</div>
+               <div class="items item4">Four</div>
+               </div>
+             <p>Provide order: -1 to flex item Two</p>
+             <div class="flex-container flex">
+               <div class="items item1">One</div>
+               <div class="items item2 orderminus1">Two</div>
+               <div class="items item3">Three</div>
+               <div class="items item4">Four</div>
+               </div>
+             <p>Provide order: -1 to flex item Two and -2 to flex item Three</p>
+             <div class="flex-container flex">
+               <div class="items item1">One</div>
+               <div class="items item2 orderminus1">Two</div>
+               <div class="items item3 orderminus2">Three</div>
+               <div class="items item4">Four</div>
+               </div>
+           </section>
+			 
+			 <section id="flx_flex">  
+			   <h3>Flex</h3>
+			   <p>Flex is a shorthand property for flex-grow,flex-shrink,flex-basis</p>
+			 </section>
+      
+        </div>
+        </div>
+        <aside id="right_container" class="sticky text_muted overflow pl_1"> 
+		  <strong class="h6 text_muted ">On this page</strong>
+          <nav id="right_navigation" class="flex flxdir_col small text_muted border_top">
+				 <!-- <a href="#workflow">Workflow</a>-->
+			  <a  href="#why">Why FlexBox</a>
+			  <a href="#flexmodel">Flex Box Model</a>
+			  <a href="#flexproperties">Flexbox Properties</a>
+				 <ul id="flx_ul">
+				  <li><a href="#flx_dir">flex-direction </a></li>
+					   <li><a href="#flxwrap">flex-wrap</a></li>
+					   <li><a href="#flx_justifyc">justify-content </a></li>
+					   <li><a href="#flx_align_items">align-items</a></li>
+             <li><a href="#flx_align_self">align-self</a></li>
+					 	<li><a href="#flx_align_content">align-content</a></li>
+					   <li><a href="#flx_grow">flex-grow</a></li>
+					   <li><a href="#flx_basis">flex-basis</a></li>
+					   
+					   <li><a href="#flx_order">order</a></li>
+					   <li><a href="#flx_flex">Flex</a></li>
+					   <!--<li><a href="#">flex</a></li>
+					   <li><a href="#">flex-flow</a></li>
+					  <li><a href="#">flex-shrink</a></li>
+					  
+					  <li><a href="#">align-self</a></li>-->
+					  		</ul>
+		 </nav>
+        </aside>
+      </main>
+    </div>
+<!--<div class="container-fluid footer_container">
+  <footer id="footer" class="container"> <div>#footer:Footer</div></footer>
+</div>-->
+	
+	 <div class="container-fluid footer_container">
+      <footer id="footer" class="container flex jc_spacebetween ">
+        <div><a href="about-me.html">About Me</a></div>
+		  <div><a href="css-flex.html">CSS Flexbox</a></div>
+		  <form method="post" action="http://10.10.1.31/formview.php" class="flex space jc_spacebetween">
+		 <input type="email" id="email1" class="form-control" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required placeholder="Submit email to be in contact">
+		<input type="submit" value="Submit">
+			 </form>
+		
+        
+       </footer>
+    </div>
+</body>
+</html>

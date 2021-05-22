@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>About Me</title>
+<link rel="stylesheet" href="css/lightbox.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="utilities/fontawesome-free-5.5.0-web/css/all.css" rel="stylesheet"><!--hrefrel="stylesheet"-->
+<link href="css/sk-bootstrap.css" rel="stylesheet" type="text/css">
+
+		<style>
+			
+			.container_grid{
+				margin:auto;         
+				/*border:1px solid red;*/
+				max-width: 1140px;
+				padding-top:2rem;
+				padding-right: 0.75px;/*;*/
+				display:grid;
+				grid-template-columns:repeat(2,1fr);
+				grid-template-rows:  80vh 80vh;;
+				grid-gap:2rem;
+				grid-template-areas: "left_card1 left_card1"
+									"down_card1 down_card1";
+			}
+		
+			
+			.left_card{
+				position:relative;
+				/*background-color: pink;*/
+				grid-area: left_card1;
+				box-shadow: 7px 5px 15px #7952b3;
+				background: url("img/picture1/sarveen.jpg");
+				border-top-left-radius: 15px;
+				border-top-right-radius: 15px;
+				background-position: center;background-size: cover;
+				background-repeat:no-repeat;
+				}
+			.text1{position:absolute;
+				/*border: 1px solid red;*/
+				top:17rem ;
+				left: 1rem;
+				font-size: 1.5rem;
+				color:darkviolet;
+				}
+				
+				.right_card{
+				grid_area: right_card1;
+				border-radius:18px;
+				background-color: #ffe484;
+				box-shadow: 7px 5px 15px #7952b3;
+				}
+.down_card{
+				grid_area:  down_card1;
+				border-radius:20px;
+				background-color: #ffe484;
+				box-shadow: 7px 5px 15px #7952b3;
+				}
+
+
+			
+		section{background-color: rgba(79,193,241,0.64);
+			padding: 1rem;
+			margin-bottom: 1rem;}
+			img{width: 100%;
+				height: 100%;}
+		
+    </style>
+</head>
+
+
+
+<body>
+	<div class="container-fluid head_color">
+		<div class="container">
+		  <header id="topheader" class="flex jc_spacebetween"><!---->
+			<nav id="menu">
+			    <a href="#">Logo</a>
+				<a href="index.html">Home</a>
+				<a href="#summary">About me</a>
+			</nav>	
+			<nav id="social-links" >
+				<i class="fa fa-linkedin fontawesome" aria-hidden="true"></i>
+				
+				<a href="#" id="insta"><i class="fa fa-instagram" aria-hidden="true"></i>
+</a>
+				<a href="https://github.com/sarveen-kohli?tab=repositories" id="git"><i class="fa fa-github" aria-hidden="true"></i>
+</a>
+				<a href="https://getbootstrap.com/docs/5.0/getting-started/introduction/" id="Bootstrap">Bootstrap</a>
+			</nav>
+		  </header>
+		</div>
+    </div>
+   <div class="container-fluid sub_head sticky1">
+      <header id="sub_header" class="container flex jc_right">
+       <!-- <div id="sub_text">Your are at: Home</div>-->
+		
+		 <form method="post" action="http://10.10.1.31/formview.php" class="flex jc_spacebetween">
+		 <input type="email" id="email" class="form-control" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required placeholder="Submit email to be in contact">
+		<input type="submit" value="Submit">
+		 </form> 
+	
+	</header></div>
+	
+	
+	<div class="container_grid">
+		
+		
+					<div class="left_card">
+						
+					<!--	<div class="img1"></div>-->
+						<div class="text1">
+							<h2>Hello Creativity</h2>
+							<h3>Hello Positivity!! </h3>
+						</div>
+					</div>
+				  <div class="right_card">
+					  
+					   
+							<h2>Sarveen Kohli</h2> <div class="text_muted1">
+							<p>I am originally from India and living in Germany since 2015.My professional background is in software industry in multiple profiles as test analyst and business analyst,and carry 8 years of work experience in India with multiple U.S based clients. In 2015 I moved to Munich with my husband. After my daughter was born in 2016, I started learning German, was bit challenging intially however I managed till B2 level with flying colors. My aquaintances started to ask for support in German grammer,so I help them on weekends figuring out grammer exercises Nominativ,Akkusativ and Dative,ufff!!</p>
+							<p>In between I have worked on couple of freelancing Wordpress projects that arose my interest in Web development,so I landed up with alfatraining and enjoying my current journey!</p>
+							<p>Some of my family moments can be viewed along.</p>
+						</div>
+				</div>
+		<div class="down_card">
+					  
+					    
+							 
+			
+			<a href="img/my-family.jpg" data-lightbox="show" data-title="Family is where Life begins">
+			<img alt="" src="img/my-family.jpg"></a>
+								  
+								  
+			<a href="img/her-first-india-trip.jpg" data-lightbox="show" data-title="Her First Inida Visit"></a>
+								  
+			<a href="img/her-first-swtizerland-vacation.jpg" data-lightbox="show" data-title="Her first vacation in Switzerland"></a>
+		 <!---->
+							
+		</div>
+	</div>
+	 <div class="container-fluid footer_container">
+      <footer id="footer" class="container flex jc_spacebetween ">
+        <div><a href="about-me.html">About Me</a></div>
+		  <div><a href="css-flex.html">CSS Flexbox</a></div>
+		  <form method="post" action="http://10.10.1.31/formview.php" class="flex space jc_spacebetween">
+		 <input type="email" id="email1" class="form-control" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required placeholder="Submit email to be in contact">
+		<input type="submit" value="Submit">
+			 </form>
+		
+        
+       </footer>
+    </div>
+	
+	<script src="js/lightbox/lightbox-plus-jquery.min.js"></script>
+	</body>
+
+</html>
